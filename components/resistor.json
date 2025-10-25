@@ -1,0 +1,23 @@
+{
+  "id": "resistor",
+  "name": "Resistor",
+  "category": "passive",
+  "description": "Resistor component",
+  "svg": "<!-- viewBox: 0 0 484 103 -->\n    <title>Resistor</title>\n    <g id=\"Page-1\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\" stroke-linecap=\"square\">\n        <g id=\"Resistor\" transform=\"translate(4.708333, 13.225000)\" stroke=\"#000000\" stroke-width=\"10\">\n            <line x1=\"0.5\" y1=\"38.15\" x2=\"121\" y2=\"38.15\" id=\"Line-2\"></line>\n            <line x1=\"353.75\" y1=\"38.15\" x2=\"474.25\" y2=\"38.15\" id=\"Line-2\"></line>\n            <polyline id=\"Path\" fill-opacity=\"0\" fill=\"#000000\" fill-rule=\"nonzero\" transform=\"translate(237.250000, 38.150000) rotate(90.000000) translate(-237.250000, -38.150000) \" points=\"237.25 -70.85 237.25 -59.95 199.1 -43.6 275.4 -10.9 199.1 21.8 275.4 54.5 199.1 87.2 275.4 119.9 237.25 136.25 237.25 147.15\"></polyline>\n        </g>\n    </g>",
+  "width": 145.0,
+  "height": 31.0,
+  "endpoints": [
+    {
+      "id": "left",
+      "x": 0.0,
+      "y": 15.5,
+      "direction": "left"
+    },
+    {
+      "id": "right",
+      "x": 145.0,
+      "y": 15.5,
+      "direction": "right"
+    }
+  ]
+}

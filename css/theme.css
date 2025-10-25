@@ -1,0 +1,107 @@
+/* Theme CSS Variables */
+
+:root {
+    /* Light theme colors */
+    --bg-primary: #ffffff;
+    --bg-secondary: #f5f5f5;
+    --bg-tertiary: #e8e8e8;
+    --text-primary: #1a1a1a;
+    --text-secondary: #666666;
+    --text-tertiary: #999999;
+    --border-color: #d0d0d0;
+    --border-hover: #a0a0a0;
+    --accent-primary: #2563eb;
+    --accent-hover: #1d4ed8;
+    --success: #16a34a;
+    --warning: #ea580c;
+    --danger: #dc2626;
+
+    /* Grid colors */
+    --grid-dot: rgba(0, 0, 0, 0.15);
+    --grid-bg: #ffffff;
+
+    /* Component colors */
+    --component-fill: #ffffff;
+    --component-stroke: #1a1a1a;
+    --component-hover: #e0e7ff;
+    --component-selected: #93c5fd;
+
+    /* Wire colors */
+    --wire-default: #1a1a1a;
+    --wire-hover: #2563eb;
+    --wire-junction: #1a1a1a;
+
+    /* Shadow */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+
+    /* Spacing */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+}
+
+/* Dark theme */
+[data-theme="dark"] {
+    --bg-primary: #1a1a1a;
+    --bg-secondary: #2d2d2d;
+    --bg-tertiary: #3d3d3d;
+    --text-primary: #f5f5f5;
+    --text-secondary: #a0a0a0;
+    --text-tertiary: #707070;
+    --border-color: #404040;
+    --border-hover: #606060;
+    --accent-primary: #3b82f6;
+    --accent-hover: #2563eb;
+    --success: #22c55e;
+    --warning: #f97316;
+    --danger: #ef4444;
+
+    --grid-dot: rgba(255, 255, 255, 0.15);
+    --grid-bg: #1a1a1a;
+
+    --component-fill: #2d2d2d;
+    --component-stroke: #f5f5f5;
+    --component-hover: #1e3a5f;
+    --component-selected: #1e40af;
+
+    --wire-default: #f5f5f5;
+    --wire-hover: #3b82f6;
+    --wire-junction: #f5f5f5;
+
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Dark theme adjustments for theme toggle icon */
+[data-theme="dark"] .theme-icon-rays {
+    display: none;
+}
+
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    overflow: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Smooth transitions for theme switching */
+* {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+svg {
+    transition: fill 0.3s ease, stroke 0.3s ease;
+}

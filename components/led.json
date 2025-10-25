@@ -1,0 +1,23 @@
+{
+  "id": "led",
+  "name": "LED",
+  "category": "active",
+  "description": "LED component",
+  "svg": "<!-- viewBox: 0 0 206 344 -->\n    <title>LED</title>\n    <g id=\"Page-1\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\">\n        <g id=\"LED\" transform=\"translate(0.771452, 6.500000)\">\n            <g id=\"Diode\" transform=\"translate(0.000000, 102.500000)\" stroke=\"#000000\" stroke-width=\"10\">\n                <path d=\"M100,25.0778222 L205.669816,210 L-5.66981589,210 L100,25.0778222 Z\" id=\"Triangle\" transform=\"translate(100.000000, 115.000000) rotate(90.000000) translate(-100.000000, -115.000000) \"></path>\n                <line x1=\"85.7142857\" y1=\"115\" x2=\"314.285714\" y2=\"115\" id=\"Line-2\" stroke-linecap=\"square\" transform=\"translate(200.000000, 115.000000) rotate(90.000000) translate(-200.000000, -115.000000) \"></line>\n            </g>\n            <path id=\"Line-3\" d=\"M191.5,32.7434211 L179.151359,80.361811 L165.587,68.527 L113.514114,128.215187 L110.884453,131.229301 L104.856225,125.96998 L107.485886,122.955866 L159.559,63.268 L145.996103,51.4355422 L191.5,32.7434211 Z\" fill=\"#000000\" fill-rule=\"nonzero\"></path>\n            <path id=\"Line-3\" d=\"M142.5,0.414473684 L130.151359,48.0328637 L116.587,36.198 L64.5141141,95.8862398 L61.8844533,98.9003539 L55.8562251,93.6410323 L58.4858859,90.6269181 L110.559,30.939 L96.9961034,19.1065948 L142.5,0.414473684 Z\" fill=\"#000000\" fill-rule=\"nonzero\"></path>\n        </g>\n    </g>",
+  "width": 62.0,
+  "height": 103.0,
+  "endpoints": [
+    {
+      "id": "left",
+      "x": 0.0,
+      "y": 51.5,
+      "direction": "left"
+    },
+    {
+      "id": "right",
+      "x": 62.0,
+      "y": 51.5,
+      "direction": "right"
+    }
+  ]
+}

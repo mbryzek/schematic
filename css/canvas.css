@@ -1,0 +1,295 @@
+/* Canvas Container */
+
+.canvas-container {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--grid-bg);
+    cursor: default;
+}
+
+.canvas-container.panning {
+    cursor: grab;
+}
+
+.canvas-container.panning:active {
+    cursor: grabbing;
+}
+
+/* SVG Canvas */
+.schematic-canvas {
+    width: 100%;
+    height: 100%;
+    user-select: none;
+}
+
+/* Grid */
+.grid-layer {
+    fill: var(--grid-bg);
+}
+
+.grid-dot {
+    fill: var(--grid-dot);
+}
+
+.grid-layer.hidden {
+    display: none;
+}
+
+/* Components on Canvas */
+.component-instance {
+    cursor: move;
+    transition: opacity 0.2s ease;
+}
+
+.component-instance:hover .component-body {
+    stroke: var(--accent-primary);
+    stroke-width: 2;
+}
+
+.component-instance.selected .component-body {
+    stroke: var(--component-selected);
+    stroke-width: 3;
+    filter: drop-shadow(0 0 4px var(--component-selected));
+}
+
+.component-instance.dragging {
+    opacity: 0.7;
+}
+
+.component-body {
+    fill: var(--component-fill);
+    stroke: var(--component-stroke);
+    stroke-width: 1.5;
+    transition: all 0.2s ease;
+}
+
+/* Theme color support for components on canvas */
+.component-body svg path,
+.component-body svg line,
+.component-body svg circle,
+.component-body svg rect,
+.component-body svg polygon,
+.component-body svg polyline,
+.component-body svg ellipse {
+    stroke: var(--component-stroke) !important;
+}
+
+.component-body svg text {
+    fill: var(--component-stroke) !important;
+}
+
+.component-body svg [fill="#000000"]:not([fill-opacity="0"]),
+.component-body svg [fill="#000"]:not([fill-opacity="0"]),
+.component-body svg [fill="black"]:not([fill-opacity="0"]) {
+    fill: var(--component-stroke) !important;
+}
+
+/* Component Labels */
+.component-label {
+    font-size: 12px;
+    fill: var(--text-primary);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+    user-select: none;
+    pointer-events: none;
+}
+
+.component-label-bg {
+    fill: var(--bg-primary);
+    opacity: 0.9;
+}
+
+/* Component Endpoints */
+.component-endpoint {
+    cursor: crosshair;
+    transition: fill 0.2s ease, stroke 0.2s ease;
+}
+
+.component-endpoint.hover {
+    fill: var(--accent-primary);
+}
+
+.component-endpoint.active {
+    fill: var(--success) !important;
+    stroke: var(--success) !important;
+    stroke-width: 2 !important;
+}
+
+/* Wires */
+.wire {
+    stroke: var(--wire-default);
+    stroke-width: 3;
+    fill: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.wire:hover {
+    stroke: var(--wire-hover);
+    stroke-width: 4;
+}
+
+.wire.selected {
+    stroke: var(--accent-primary);
+    stroke-width: 4;
+    filter: drop-shadow(0 0 3px var(--accent-primary));
+}
+
+.wire-junction {
+    fill: var(--component-stroke);
+    stroke: var(--component-stroke);
+    stroke-width: 1;
+    cursor: pointer;
+}
+
+.wire-junction:hover {
+    r: 5;
+    fill: var(--accent-primary);
+}
+
+/* Wire Preview (while drawing) */
+.wire-preview {
+    stroke: var(--accent-primary);
+    stroke-width: 2;
+    stroke-dasharray: 5, 5;
+    fill: none;
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.wire-waypoint {
+    fill: var(--accent-primary);
+    stroke: white;
+    stroke-width: 1;
+    cursor: move;
+}
+
+.wire-waypoint:hover {
+    r: 5;
+}
+
+/* Selection Box (around selected component) */
+.selection-box {
+    fill: none;
+    stroke: var(--accent-primary);
+    stroke-width: 2;
+    stroke-dasharray: 4, 4;
+    pointer-events: none;
+    animation: dash 0.5s linear infinite;
+}
+
+/* Drag Selection Box (for multi-select) */
+.drag-selection-box {
+    fill: rgba(37, 99, 235, 0.15);
+    stroke: var(--accent-primary);
+    stroke-width: 2;
+    stroke-dasharray: 4, 4;
+    pointer-events: none;
+    rx: 4;
+}
+
+@keyframes dash {
+    to {
+        stroke-dashoffset: -8;
+    }
+}
+
+/* Drag Ghost */
+.drag-ghost {
+    position: fixed;
+    pointer-events: none;
+    opacity: 0.8;
+    z-index: 1000;
+    transform: translate(-50%, -50%);
+}
+
+.drag-ghost svg {
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+/* Snap Guide */
+.snap-guide {
+    stroke: var(--accent-primary);
+    stroke-width: 1;
+    stroke-dasharray: 3, 3;
+    fill: none;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+/* Context Menu */
+.context-menu {
+    position: fixed;
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    box-shadow: var(--shadow-lg);
+    padding: var(--spacing-xs);
+    z-index: 1000;
+    min-width: 180px;
+}
+
+.context-menu-item {
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-sm);
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+    color: var(--text-primary);
+    transition: background-color 0.2s ease;
+}
+
+.context-menu-item:hover {
+    background-color: var(--bg-tertiary);
+}
+
+.context-menu-item.danger:hover {
+    background-color: var(--danger);
+    color: white;
+}
+
+.context-menu-separator {
+    height: 1px;
+    background-color: var(--border-color);
+    margin: var(--spacing-xs) 0;
+}
+
+/* Loading Indicator */
+.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-xl);
+    color: var(--text-tertiary);
+}
+
+.spinner {
+    border: 3px solid var(--border-color);
+    border-top: 3px solid var(--accent-primary);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Tooltips */
+.tooltip {
+    position: fixed;
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    pointer-events: none;
+    z-index: 1001;
+    box-shadow: var(--shadow-md);
+    white-space: nowrap;
+}

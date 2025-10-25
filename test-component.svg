@@ -1,0 +1,24 @@
+<svg viewBox="-40 -40 80 80" xmlns="http://www.w3.org/2000/svg">
+  <!-- Simple IC chip component -->
+  <rect x="-25" y="-30" width="50" height="60" fill="none" stroke="currentColor" stroke-width="2" rx="3"/>
+
+  <!-- Pins on left side -->
+  <line x1="-35" y1="-20" x2="-25" y2="-20" stroke="currentColor" stroke-width="2"/>
+  <line x1="-35" y1="-10" x2="-25" y2="-10" stroke="currentColor" stroke-width="2"/>
+  <line x1="-35" y1="0" x2="-25" y2="0" stroke="currentColor" stroke-width="2"/>
+  <line x1="-35" y1="10" x2="-25" y2="10" stroke="currentColor" stroke-width="2"/>
+  <line x1="-35" y1="20" x2="-25" y2="20" stroke="currentColor" stroke-width="2"/>
+
+  <!-- Pins on right side -->
+  <line x1="25" y1="-20" x2="35" y2="-20" stroke="currentColor" stroke-width="2"/>
+  <line x1="25" y1="-10" x2="35" y2="-10" stroke="currentColor" stroke-width="2"/>
+  <line x1="25" y1="0" x2="35" y2="0" stroke="currentColor" stroke-width="2"/>
+  <line x1="25" y1="10" x2="35" y2="10" stroke="currentColor" stroke-width="2"/>
+  <line x1="25" y1="20" x2="35" y2="20" stroke="currentColor" stroke-width="2"/>
+
+  <!-- Center circle -->
+  <circle cx="0" cy="0" r="8" fill="none" stroke="currentColor" stroke-width="2"/>
+
+  <!-- Notch at top for orientation -->
+  <path d="M -10 -30 Q 0 -35 10 -30" fill="none" stroke="currentColor" stroke-width="2"/>
+</svg>

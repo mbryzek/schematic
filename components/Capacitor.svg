@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="62px" height="156px" viewBox="0 0 62 156" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Capacitor</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+        <g id="Capacitor" transform="translate(5.021452, 5.875000)" stroke="#000000" stroke-width="10">
+            <line x1="-71.8405191" y1="72.3405191" x2="72.8405191" y2="72.3405191" id="Line-2" transform="translate(0.500000, 72.340519) rotate(90.000000) translate(-0.500000, -72.340519) "></line>
+            <line x1="-20.8405191" y1="72.6594809" x2="123.840519" y2="72.6594809" id="Line-2" transform="translate(51.500000, 72.659481) rotate(90.000000) translate(-51.500000, -72.659481) "></line>
+        </g>
+    </g>
+</svg>

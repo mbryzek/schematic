@@ -1,0 +1,23 @@
+{
+  "id": "capacitor",
+  "name": "Capacitor",
+  "category": "passive",
+  "description": "Capacitor component",
+  "svg": "<!-- viewBox: 0 0 62 156 -->\n    <title>Capacitor</title>\n    <g id=\"Page-1\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\" stroke-linecap=\"square\">\n        <g id=\"Capacitor\" transform=\"translate(5.021452, 5.875000)\" stroke=\"#000000\" stroke-width=\"10\">\n            <line x1=\"-71.8405191\" y1=\"72.3405191\" x2=\"72.8405191\" y2=\"72.3405191\" id=\"Line-2\" transform=\"translate(0.500000, 72.340519) rotate(90.000000) translate(-0.500000, -72.340519) \"></line>\n            <line x1=\"-20.8405191\" y1=\"72.6594809\" x2=\"123.840519\" y2=\"72.6594809\" id=\"Line-2\" transform=\"translate(51.500000, 72.659481) rotate(90.000000) translate(-51.500000, -72.659481) \"></line>\n        </g>\n    </g>",
+  "width": 18.5,
+  "height": 47.0,
+  "endpoints": [
+    {
+      "id": "left",
+      "x": 0.0,
+      "y": 23.5,
+      "direction": "left"
+    },
+    {
+      "id": "right",
+      "x": 18.5,
+      "y": 23.5,
+      "direction": "right"
+    }
+  ]
+}
