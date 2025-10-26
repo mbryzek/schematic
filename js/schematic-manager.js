@@ -55,10 +55,21 @@ const SchematicManager = {
         let selectionBoxEl = null;
 
         canvas?.addEventListener('mousedown', (e) => {
+            console.log('Canvas mousedown:', {
+                button: e.button,
+                shift: e.shiftKey,
+                target: e.target.id,
+                targetClass: e.target.className,
+                closestComponent: e.target.closest('.component-instance')
+            });
+
             if (e.button === 0 && !e.shiftKey && !e.altKey &&
                 !e.target.closest('.component-instance') &&
                 !WireRouter.state.isDrawing &&
-                (e.target.id === 'canvas' || e.target.id === 'grid-background')) {
+                (e.target.id === 'canvas' || e.target.id === 'grid-background' ||
+                 e.target.id === 'wires-layer' || e.target.id === 'components-layer' ||
+                 e.target.id === 'selection-layer' || e.target.id === 'wire-preview-layer')) {
+                console.log('Starting selection box');
                 selectionBoxStart = Canvas.screenToWorld(e.clientX, e.clientY);
             }
         });
@@ -66,9 +77,9 @@ const SchematicManager = {
         canvas?.addEventListener('mousemove', (e) => {
             if (selectionBoxStart) {
                 const current = Canvas.screenToWorld(e.clientX, e.clientY);
-                this.updateSelectionBox(selectionBoxStart, current, selectionBoxEl);
 
                 if (!selectionBoxEl) {
+                    console.log('Creating selection box element');
                     const selectionLayer = document.getElementById('selection-layer');
                     selectionBoxEl = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
                     selectionBoxEl.classList.add('drag-selection-box');
@@ -89,12 +100,14 @@ const SchematicManager = {
 
         document.addEventListener('mouseup', () => {
             if (selectionBoxStart && selectionBoxEl) {
+                console.log('Selection box mouseup - selecting components');
                 const bounds = {
                     x: parseFloat(selectionBoxEl.getAttribute('x')),
                     y: parseFloat(selectionBoxEl.getAttribute('y')),
                     width: parseFloat(selectionBoxEl.getAttribute('width')),
                     height: parseFloat(selectionBoxEl.getAttribute('height'))
                 };
+                console.log('Selection bounds:', bounds);
                 this.selectComponentsInBox(bounds);
                 selectionBoxEl.remove();
                 selectionBoxEl = null;
@@ -616,23 +629,32 @@ const SchematicManager = {
     },
 
     selectComponentsInBox(bounds) {
+        console.log('selectComponentsInBox called with bounds:', bounds);
+        console.log('Current components:', this.state.components.length);
+
         this.clearSelection();
 
         this.state.components.forEach(comp => {
             const worldPos = Canvas.gridToWorld(comp.gridX, comp.gridY);
-            const compWidth = comp.componentDef.width * Canvas.state.gridSize;
-            const compHeight = comp.componentDef.height * Canvas.state.gridSize;
+            // Component width/height are already in pixels, not grid units
+            const compWidth = comp.componentDef.width;
+            const compHeight = comp.componentDef.height;
+
+            console.log('Checking component:', comp.id, 'at', worldPos, 'size:', compWidth, 'x', compHeight);
 
             // Check if component overlaps with selection box
             if (worldPos.x < bounds.x + bounds.width &&
                 worldPos.x + compWidth > bounds.x &&
                 worldPos.y < bounds.y + bounds.height &&
                 worldPos.y + compHeight > bounds.y) {
+                console.log('Component', comp.id, 'is in selection box');
                 this.state.selectedItems.push(comp.id);
             }
         });
 
         this.updateSelectionVisuals();
+
+        console.log('Selected items:', this.state.selectedItems);
 
         if (this.state.selectedItems.length > 0) {
             App.setStatus(`Selected ${this.state.selectedItems.length} component${this.state.selectedItems.length > 1 ? 's' : ''}`, 'success');

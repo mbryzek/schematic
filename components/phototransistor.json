@@ -4,20 +4,20 @@
   "category": "active",
   "description": "Phototransistor component",
   "svg": "<!-- viewBox: 0 0 376 432 -->\n    <title>Phototransistor</title>\n    <g id=\"Page-1\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\">\n        <g id=\"Phototransistor\" transform=\"translate(6.644872, 6.000000)\">\n            <g id=\"NPN-Transistor\" transform=\"translate(85.522215, 0.238592)\">\n                <path d=\"M278.494518,212.503259 C278.494518,262.280235 251.954142,308.276058 208.870889,333.164547 C165.787637,358.053035 112.706881,358.053035 69.6236287,333.164547 C26.5403764,308.276058 0,262.280235 0,212.503259 C0,135.554722 62.3431214,73.1756082 139.247259,73.1756082 C216.151397,73.1756082 278.494518,135.554722 278.494518,212.503259 Z\" id=\"path1291\" stroke=\"#000000\" stroke-width=\"10\" stroke-linecap=\"square\"></path>\n                <line x1=\"68.4140044\" y1=\"141.666667\" x2=\"68.4140044\" y2=\"283.333333\" id=\"path2052\" stroke=\"#000000\" stroke-width=\"10\"></line>\n                <polyline id=\"path2056\" stroke=\"#000000\" stroke-width=\"10\" stroke-linejoin=\"round\" points=\"68.4140044 188.888889 186.46956 94.4444444 186.46956 0\"></polyline>\n                <polyline id=\"path2058\" stroke=\"#000000\" stroke-width=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\" points=\"68.4140044 236.111111 127.441782 283.333333 186.46956 330.555556\"></polyline>\n                <line x1=\"186.46956\" y1=\"425\" x2=\"186.46956\" y2=\"330.555556\" id=\"path9839\" stroke=\"#000000\" stroke-width=\"10\" stroke-linejoin=\"round\"></line>\n                <path id=\"Line-3\" d=\"M105.155721,261.667008 L107.498417,263.540981 L129.004,280.744 L137.750063,269.81187 L153.681431,304.325512 L116.511696,296.362421 L125.256,285.429 L103.75047,268.226373 L101.407774,266.352399 L105.155721,261.667008 Z\" fill=\"#000000\" fill-rule=\"nonzero\"></path>\n            </g>\n            <path id=\"Line-3\" d=\"M-0.18725423,42.1881324 L2.73324995,44.9213823 L60.566,99.046 L72.8660178,85.9041638 L89.9586891,132.032686 L42.8002684,118.02971 L55.1,104.887 L-2.73324995,50.7623907 L-5.65375414,48.0291408 L-0.18725423,42.1881324 Z\" fill=\"#000000\" fill-rule=\"nonzero\"></path>\n            <path id=\"Line-3\" d=\"M33.8320746,-5.65375414 L36.7525787,-2.92050418 L94.585,51.204 L106.885347,38.0622772 L123.978018,84.1907997 L76.8195971,70.1878233 L89.119,57.045 L31.2860788,2.92050418 L28.3655746,0.18725423 L33.8320746,-5.65375414 Z\" fill=\"#000000\" fill-rule=\"nonzero\"></path>\n        </g>\n    </g>",
-  "width": 11.5,
-  "height": 13.0,
+  "width": 100,
+  "height": 120,
   "endpoints": [
     {
-      "id": "left",
-      "x": 0.0,
-      "y": 6.5,
-      "direction": "left"
+      "id": "collector",
+      "x": 80,
+      "y": 0,
+      "direction": "up"
     },
     {
-      "id": "right",
-      "x": 11.5,
-      "y": 6.5,
-      "direction": "right"
+      "id": "emitter",
+      "x": 80,
+      "y": 120,
+      "direction": "down"
     }
   ]
 }

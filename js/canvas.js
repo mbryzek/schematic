@@ -7,7 +7,7 @@ const Canvas = {
         zoom: 1,
         panX: 0,
         panY: 0,
-        gridSize: 10,
+        gridSize: 80,  // Snap to visible grid dots
         showGrid: true,
         isPanning: false,
         lastMouseX: 0,
@@ -31,7 +31,7 @@ const Canvas = {
 
         // Load preferences
         const prefs = Storage.getPreferences();
-        this.state.gridSize = prefs.gridSize || 10;
+        this.state.gridSize = prefs.gridSize || 80;
         this.state.showGrid = prefs.showGrid !== false;
 
         // Update grid pattern
@@ -134,6 +134,7 @@ const Canvas = {
         this.state.zoom = newZoom;
         this.updateTransform();
         this.updateZoomDisplay();
+        this.updateGridPattern(); // Update grid density based on zoom
     },
 
     // Pan
@@ -174,8 +175,36 @@ const Canvas = {
     updateGridPattern() {
         const pattern = document.getElementById('grid-pattern');
         if (pattern) {
-            pattern.setAttribute('width', this.state.gridSize);
-            pattern.setAttribute('height', this.state.gridSize);
+            // Calculate grid spacing to maintain consistent visual density at all zoom levels
+            // The key insight: spacing in world units should scale with 1/zoom to maintain
+            // constant screen-space density
+            const targetScreenSpacing = 80; // Target spacing in screen pixels (increased to reduce clutter)
+            const worldSpacing = targetScreenSpacing / this.state.zoom;
+
+            // Round to nearest power of 2 times base grid size for clean snapping
+            const baseGrid = this.state.gridSize;
+            let multiplier = Math.max(1, Math.round(worldSpacing / baseGrid));
+
+            // Ensure multiplier is a power of 2 for clean grid alignment
+            multiplier = Math.pow(2, Math.round(Math.log2(multiplier)));
+
+            const effectiveGridSize = baseGrid * multiplier;
+
+            pattern.setAttribute('width', effectiveGridSize);
+            pattern.setAttribute('height', effectiveGridSize);
+
+            // Update circle position to center of pattern
+            const circle = pattern.querySelector('circle');
+            if (circle) {
+                const center = effectiveGridSize / 2;
+                circle.setAttribute('cx', center);
+                circle.setAttribute('cy', center);
+
+                // Keep dot size constant in world units so it appears constant on screen
+                // when affected by zoom transform
+                const baseRadius = 2;
+                circle.setAttribute('r', baseRadius);
+            }
         }
 
         if (!this.state.showGrid) {

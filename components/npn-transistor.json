@@ -4,20 +4,26 @@
   "category": "active",
   "description": "NPN Transistor component",
   "svg": "<!-- viewBox: 0 0 357 425 -->\n    <title>NPN Transistor</title>\n    <g id=\"Page-1\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\">\n        <g id=\"NPN-Transistor\" transform=\"translate(0.084572, -0.000000)\">\n            <path d=\"M351.74718,212.503259 C351.74718,262.280235 325.206804,308.276058 282.123552,333.164547 C239.040299,358.053035 185.959543,358.053035 142.876291,333.164547 C99.7930386,308.276058 73.2526623,262.280235 73.2526623,212.503259 C73.2526623,135.554722 135.595784,73.1756082 212.499921,73.1756082 C289.404059,73.1756082 351.74718,135.554722 351.74718,212.503259 Z\" id=\"path1291\" stroke=\"#000000\" stroke-width=\"10\" stroke-linecap=\"square\"></path>\n            <line x1=\"141.666667\" y1=\"141.666667\" x2=\"141.666667\" y2=\"283.333333\" id=\"path2052\" stroke=\"#000000\" stroke-width=\"10\"></line>\n            <line x1=\"0\" y1=\"212.5\" x2=\"141.666667\" y2=\"212.5\" id=\"path2054\" stroke=\"#000000\" stroke-width=\"10\" stroke-linejoin=\"round\"></line>\n            <polyline id=\"path2056\" stroke=\"#000000\" stroke-width=\"10\" stroke-linejoin=\"round\" points=\"141.666667 188.888889 259.722222 94.4444444 259.722222 0\"></polyline>\n            <polyline id=\"path2058\" stroke=\"#000000\" stroke-width=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\" points=\"141.666667 236.111111 200.694444 283.333333 259.722222 330.555556\"></polyline>\n            <line x1=\"259.722222\" y1=\"425\" x2=\"259.722222\" y2=\"330.555556\" id=\"path9839\" stroke=\"#000000\" stroke-width=\"10\" stroke-linejoin=\"round\"></line>\n            <path id=\"Line-3\" d=\"M178.408383,261.667008 L180.751079,263.540981 L202.257,280.744 L211.002725,269.81187 L226.934093,304.325512 L189.764358,296.362421 L198.509,285.429 L177.003132,268.226373 L174.660436,266.352399 L178.408383,261.667008 Z\" fill=\"#000000\" fill-rule=\"nonzero\"></path>\n        </g>\n    </g>",
-  "width": 10.5,
-  "height": 13.0,
+  "width": 80,
+  "height": 120,
   "endpoints": [
     {
-      "id": "left",
-      "x": 0.0,
-      "y": 6.5,
+      "id": "base",
+      "x": 0,
+      "y": 60,
       "direction": "left"
     },
     {
-      "id": "right",
-      "x": 10.5,
-      "y": 6.5,
-      "direction": "right"
+      "id": "collector",
+      "x": 60,
+      "y": 0,
+      "direction": "up"
+    },
+    {
+      "id": "emitter",
+      "x": 60,
+      "y": 120,
+      "direction": "down"
     }
   ]
 }

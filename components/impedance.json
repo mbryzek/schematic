@@ -4,19 +4,19 @@
   "category": "passive",
   "description": "Impedance component",
   "svg": "<!-- viewBox: 0 0 484 114 -->\n    <title>Impedance</title>\n    <g id=\"Page-1\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\">\n        <g id=\"Impedance\" transform=\"translate(4.708333, 0.525000)\" stroke=\"#000000\" stroke-width=\"10\">\n            <line x1=\"0.5\" y1=\"56.5\" x2=\"136.875\" y2=\"56.5\" id=\"Line-2\" stroke-linecap=\"square\"></line>\n            <line x1=\"346.25\" y1=\"56.5\" x2=\"474.25\" y2=\"56.5\" id=\"Line-2\" stroke-linecap=\"square\"></line>\n            <rect id=\"Rectangle\" x=\"141.875\" y=\"5\" width=\"199.375\" height=\"103\"></rect>\n        </g>\n    </g>",
-  "width": 145.0,
-  "height": 34.0,
+  "width": 120,
+  "height": 20,
   "endpoints": [
     {
       "id": "left",
-      "x": 0.0,
-      "y": 17.0,
+      "x": 0,
+      "y": 10,
       "direction": "left"
     },
     {
       "id": "right",
-      "x": 145.0,
-      "y": 17.0,
+      "x": 120,
+      "y": 10,
       "direction": "right"
     }
   ]

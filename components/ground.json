@@ -4,13 +4,13 @@
   "category": "power",
   "description": "Ground component",
   "svg": "<!-- viewBox: 0 0 132 192 -->\n    <title>Ground</title>\n    <g id=\"Page-1\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\" stroke-linecap=\"square\">\n        <g id=\"Ground\" transform=\"translate(5.147691, 5.124311)\" stroke=\"#000000\" stroke-width=\"10\">\n            <line x1=\"0.5\" y1=\"123.750689\" x2=\"121\" y2=\"123.750689\" id=\"Line-2\"></line>\n            <line x1=\"0.395280298\" y1=\"60.5007805\" x2=\"120.89528\" y2=\"60.5007805\" id=\"Line-2\" transform=\"translate(60.395280, 60.500781) rotate(90.100000) translate(-60.395280, -60.500781) \"></line>\n            <line x1=\"28.8950617\" y1=\"152.500689\" x2=\"92.5\" y2=\"152.500689\" id=\"Line-2\"></line>\n            <line x1=\"50.6847497\" y1=\"181.250689\" x2=\"70.1415398\" y2=\"181.250689\" id=\"Line-2\"></line>\n        </g>\n    </g>",
-  "width": 39.5,
-  "height": 57.5,
+  "width": 40,
+  "height": 60,
   "endpoints": [
     {
       "id": "top",
-      "x": 19.75,
-      "y": 0.0,
+      "x": 20,
+      "y": 0,
       "direction": "up"
     }
   ]

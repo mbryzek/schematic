@@ -24,10 +24,6 @@
 }
 
 /* Grid */
-.grid-layer {
-    fill: var(--grid-bg);
-}
-
 .grid-dot {
     fill: var(--grid-dot);
 }

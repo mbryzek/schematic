@@ -14,7 +14,7 @@ const Storage = {
     getPreferences() {
         const defaults = {
             theme: 'light',
-            gridSize: 10,
+            gridSize: 80,
             showGrid: true,
             autoSave: true
         };

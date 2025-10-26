@@ -4,19 +4,19 @@
   "category": "active",
   "description": "Diode component",
   "svg": "<!-- viewBox: 0 0 206 240 -->\n    <title>Diode</title>\n    <g id=\"Page-1\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\">\n        <g id=\"Diode\" transform=\"translate(0.583333, 5.000000)\" stroke=\"#000000\" stroke-width=\"10\">\n            <path d=\"M100,25.0778222 L205.669816,210 L-5.66981589,210 L100,25.0778222 Z\" id=\"Triangle\" transform=\"translate(100.000000, 115.000000) rotate(90.000000) translate(-100.000000, -115.000000) \"></path>\n            <line x1=\"85.7142857\" y1=\"115\" x2=\"314.285714\" y2=\"115\" id=\"Line-2\" stroke-linecap=\"square\" transform=\"translate(200.000000, 115.000000) rotate(90.000000) translate(-200.000000, -115.000000) \"></line>\n        </g>\n    </g>",
-  "width": 62.0,
-  "height": 72.0,
+  "width": 60,
+  "height": 60,
   "endpoints": [
     {
       "id": "left",
-      "x": 0.0,
-      "y": 36.0,
+      "x": 0,
+      "y": 30,
       "direction": "left"
     },
     {
       "id": "right",
-      "x": 62.0,
-      "y": 36.0,
+      "x": 60,
+      "y": 30,
       "direction": "right"
     }
   ]
